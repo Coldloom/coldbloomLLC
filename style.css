@@ -1,156 +1,54 @@
-* File: coldloom.css - BADASS DARK MODE UPGRADE */
+/* ========== GLOBAL UTILITIES ========== */
 
-/* RESET & BASE */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* FLEX UTILS */
+.flex {
+  display: flex;
 }
 
-body {
-  font-family: 'Montserrat', Arial, sans-serif;
-  line-height: 1.6;
-  color: #e4e4e4;
-  background-color: #0d1117;
-  scroll-behavior: smooth;
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-/* MEDIA QUERIES */
-@media (max-width: 768px) {
-  .container {
-    padding: 0 10px;
-  }
+/* SPACING */
+.mt-2 { margin-top: 20px; }
+.mb-2 { margin-bottom: 20px; }
+.mt-4 { margin-top: 40px; }
+.mb-4 { margin-bottom: 40px; }
+.p-2 { padding: 20px; }
+.p-4 { padding: 40px; }
 
-  .hero {
-    padding: 60px 0;
-  }
+/* TEXT UTILS */
+.text-center { text-align: center; }
+.text-uppercase { text-transform: uppercase; }
+.text-accent { color: #00e0ff; }
+.text-muted { color: #999; }
 
-  .hero-title {
-    font-size: 36px;
-  }
-
-  .hero-tagline {
-    font-size: 18px;
-  }
-
-  .lead-form {
-    padding: 30px 0;
-  }
-
-  .lead-form-title {
-    font-size: 24px;
-  }
-
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 80px;
-    left: 0;
-    width: 100%;
-    background-color: #111927;
-    padding: 20px;
-  }
-
-  .nav-links li {
-    margin-left: 0;
-    margin-bottom: 10px;
-  }
-
-  .hamburger {
-    display: flex;
-  }
-}
-
-/* HEADER */
-header {
-  background-color: #111927;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  transition: box-shadow 0.3s ease;
-}
-
-header.scrolled {
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
-}
-
-/* HAMBURGER MENU */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  padding: 10px;
+/* BUTTONS */
+.btn {
+  display: inline-block;
+  padding: 14px 28px;
   border: none;
-  background: none;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
 
-.bar {
-  width: 25px;
-  height: 3px;
-  background-color: #00e0ff;
-  margin: 4px 0;
-}
-
-/* HERO SECTION */
-.hero {
-  background: linear-gradient(145deg, #0d1117 0%, #111927 100%);
-  padding: 120px 0;
-  text-align: center;
-}
-
-.hero-title {
-  font-size: 54px;
-  font-weight: 900;
-  color: #00e0ff;
-  margin-bottom: 20px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
-
-.hero-tagline {
-  font-size: 22px;
-  color: #ccc;
-  margin-bottom: 40px;
-}
-
-/* LEAD FORM */
-.lead-form {
-  background-color: #1a1f2a;
-  padding: 60px 0;
-  text-align: center;
-  border-top: 1px solid #222;
-  border-bottom: 1px solid #222;
-}
-
-.lead-form-title {
-  font-size: 36px;
-  font-weight: 700;
-  color: #00e0ff;
-  margin-bottom: 30px;
-}
-
-.lead-form-button {
-  padding: 14px 36px;
+.btn-accent {
   background-color: #00e0ff;
   color: #0d1117;
-  border: none;
-  font-size: 18px;
-  font-weight: 700;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  letter-spacing: 1px;
-  text-transform: uppercase;
 }
 
-.lead-form-button:hover {
+.btn-accent:hover {
   background-color: #00b4cc;
+  transform: scale(1.05);
 }
