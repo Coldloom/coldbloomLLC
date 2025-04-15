@@ -54,3 +54,33 @@ body {
   height: auto;
   border-radius: 10px;
 }
+
+/* CTA Section Styles */
+.cta {
+  background-color: #34C759;
+  color: #FFFFFF;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.cta h2 {
+  font-size: 36px;
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+
+.cta p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.cta button {
+  background-color: #FFFFFF;
+  color: #34C759;
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  margin: 0 10px;
+}
