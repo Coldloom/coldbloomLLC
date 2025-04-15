@@ -187,4 +187,9 @@ nav {
     cursor: pointer;
     transition: background-color 0.3s ease;
     width: 100%;
-    max-width:
+    max-width: 250px;
+}
+
+.lead-form-button:hover {
+    background-color: #218838;
+}
