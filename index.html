@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,6 +6,7 @@
     <title>Coldloom - Lead Generation Service</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <header>
@@ -15,102 +16,505 @@
                 <ul class="nav-links">
                     <li><a href="#hero">Home</a></li>
                     <li><a href="#services">Services</a></li>
-                    <li><a href="#testimonials">Testimonials</a></li>
-                    <li><a href="#faq">FAQ</a></li>
-                    <li><a href="#lead-form">Contact</a></li>
+                    <li><a href="#case-studies">Case Studies</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
+                 <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
             </div>
         </nav>
     </header>
 
     <section id="hero" class="hero">
         <div class="container">
-            <h1>Connect with Qualified Leads, Faster, with Coldloom.</h1>
-            <p class="tagline">We streamline the process, so you connect with the right people, every time.</p>
-            <a href="#lead-form" class="btn">Generate My Leads</a>
-          <img src="image_755cfd.jpg" alt="Coldloom Logo">
+            <h1 class="hero-title">Connect with Qualified Leads, Faster, with Coldloom.</h1>
+            <p class="hero-tagline">We streamline the process, so you connect with the right people, every time.</p>
+            <a href="#lead-form" class="hero-btn">Generate My Leads</a>
+            <div class="hero-image-wrapper">
+                <img src="lead-generation-graphic.jpg" alt="Lead Generation Graphic" class="hero-image">
+            </div>
         </div>
     </section>
 
     <section id="lead-form" class="lead-form">
         <div class="container">
-            <h2>Provide your information to get started.</h2>
-            <form action="your-form-processing-url" method="POST">
-                <input type="text" name="name" placeholder="Name" required>
-                <input type="email" name="email" placeholder="Email" required>
-                <input type="tel" name="phone" placeholder="Phone Number">
-                <input type="text" name="company" placeholder="Company Name">
-                <textarea name="message" placeholder="Your Message"></textarea>
-                <button type="submit">Submit Information</button>
+            <h2 class="lead-form-title">Provide your information to get started.</h2>
+            <form action="your-form-processing-url" method="POST" class="lead-form-form" id="contact-form">
+                <div class="form-group">
+                    <input type="text" name="name" placeholder="Name" required id="name">
+                    <div id="name-error" class="error-message"></div>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="Email" required id="email">
+                    <div id="email-error" class="error-message"></div>
+                </div>
+                <div class="form-group">
+                    <input type="tel" name="phone" placeholder="Phone Number" id="phone">
+                    <div id="phone-error" class="error-message"></div>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="company" placeholder="Company Name" id="company">
+                    <div id="company-error" class="error-message"></div>
+                </div>
+                <div class="form-group">
+                    <textarea name="message" placeholder="Your Message" id="message"></textarea>
+                    <div id="message-error" class="error-message"></div>
+                </div>
+                <button type="submit" class="lead-form-button">Submit Information</button>
             </form>
+            <div id="form-submission-message" class="form-submission-message"></div>
         </div>
     </section>
 
     <section id="services" class="services">
         <div class="container">
-            <h2>Our Services</h2>
-            <div class="service-item">
-                <h3>Targeted Lead Generation</h3>
-                <p>We use advanced strategies to identify and target your ideal customers.</p>
+            <h2 class="services-title">Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card service-card-1">
+                    <div class="service-card-content">
+                        <h3 class="service-card-title">Targeted Lead Generation</h3>
+                        <p class="service-card-description">We use advanced strategies to identify and target your ideal customers.</p>
+                        <ul class="service-card-list">
+                            <li>Market Research</li>
+                            <li>Persona Development</li>
+                            <li>Multi-Channel Outreach</li>
+                        </ul>
+                        <a href="#" class="service-card-button">Learn More</a>
+                    </div>
+                    <div class="service-card-image-wrapper">
+                         <img src="service-1.jpg" alt="Targeted Lead Generation" class="service-card-image">
+                    </div>
+                </div>
+                <div class="service-card service-card-2">
+                     <div class="service-card-image-wrapper">
+                         <img src="service-2.jpg" alt="Lead Qualification" class="service-card-image">
+                    </div>
+                    <div class="service-card-content">
+                        <h3 class="service-card-title">Lead Qualification</h3>
+                        <p class="service-card-description">Our team qualifies leads to ensure you're only connecting with those who are ready to buy.</p>
+                        <ul class="service-card-list">
+                            <li>Lead Scoring</li>
+                            <li>Sales Readiness Assessment</li>
+                            <li>Appointment Setting</li>
+                        </ul>
+                        <a href="#" class="service-card-button">Learn More</a>
+                    </div>
+                </div>
+                <div class="service-card service-card-3">
+                    <div class="service-card-content">
+                        <h3 class="service-card-title">Sales Enablement</h3>
+                        <p class="service-card-description">We provide your sales team with the tools and information they need to close more deals.</p>
+                        <ul class="service-card-list">
+                            <li>Sales Content Creation</li>
+                            <li>CRM Integration</li>
+                            <li>Performance Tracking</li>
+                        </ul>
+                        <a href="#" class="service-card-button">Learn More</a>
+                    </div>
+                    <div class="service-card-image-wrapper">
+                        <img src="service-3.jpg" alt="Sales Enablement" class="service-card-image">
+                    </div>
+                </div>
             </div>
-            <div class="service-item">
-                <h3>Lead Qualification</h3>
-                <p>Our team qualifies leads to ensure you're only connecting with those who are ready to buy.</p>
-            </div>
-            <div class="service-item">
-                <h3>Sales Enablement</h3>
-                <p>We provide your sales team with the tools and information they need to close more deals.</p>
+             <div class="services-overview">
+                <p>Coldloom offers a suite of lead generation services designed to fuel your business growth.  We combine cutting-edge technology with proven strategies to deliver high-quality leads that convert.</p>
+                 <p>Our approach is data-driven and results-oriented.  We work closely with you to understand your specific needs and tailor our services to meet your unique goals.</p>
             </div>
         </div>
     </section>
 
-    <section id="testimonials" class="testimonials">
+    <section id="case-studies" class="case-studies">
         <div class="container">
-            <h2>What Our Clients Say</h2>
-            <div class="testimonial-item">
-                <p>"Coldloom has transformed our sales process. We're now closing deals faster than ever before."</p>
-                <p class="author">- John Smith, CEO of ABC Corp</p>
+            <h2 class="case-studies-title">Case Studies</h2>
+            <div class="case-studies-grid">
+                <div class="case-study-card case-study-card-1">
+                    <div class="case-study-card-content">
+                        <h3 class="case-study-card-title"> увеличен конверсию на 40% для компании TechCorp.</h3>
+                        <p class="case-study-card-description">
+                            Мы внедрили комплексную стратегию лидогенерации, которая включала в себя таргетированную рекламу, контент-маркетинг и автоматизацию продаж.
+                        </p>
+                         <ul class="case-study-card-list">
+                            <li> увеличение конверсии на 40%</li>
+                            <li> внедрили комплексную стратегию лидогенерации</li>
+                            <li>  таргетированная реклама, контент-маркетинг и автоматизация продаж.</li>
+                        </ul>
+                        <a href="#" class="case-study-card-button">View Case Study</a>
+                    </div>
+                    <div class="case-study-card-image-wrapper">
+                        <img src="case-study-1.jpg" alt="Case Study 1" class="case-study-card-image">
+                    </div>
+                </div>
+                <div class="case-study-card case-study-card-2">
+                    <div class="case-study-card-content">
+                        <h3 class="case-study-card-title">X2 Увеличение лидов для компании EcoSolutions.</h3>
+                        <p class="case-study-card-description">
+                            Благодаря нашей помощи, EcoSolutions смогла значительно расширить свою клиентскую базу и увеличить прибыль.
+                        </p>
+                        <ul class="case-study-card-list">
+                             <li>X2 Увеличение лидов</li>
+                            <li>расширили свою клиентскую базу</li>
+                            <li>увеличили прибыль.</li>
+                        </ul>
+                        <a href="#" class="case-study-card-button">View Case Study</a>
+                     </div>
+                     <div class="case-study-card-image-wrapper">
+                        <img src="case-study-2.jpg" alt="Case Study 2" class="case-study-card-image">
+                    </div>
+                </div>
             </div>
-            <div class="testimonial-item">
-                <p>"The quality of leads we receive from Coldloom is exceptional. Highly recommended!"</p>
-                <p class="author">- Jane Doe, Sales Director at XYZ Inc</p>
+             <div class="case-studies-overview">
+                  <p>Our case studies demonstrate our ability to deliver exceptional results for our clients.  We have a proven track record of success in a variety of industries.</p>
+                  <p>We work with businesses of all sizes, from small startups to large enterprises.  Our solutions are scalable and can be customized to fit your specific needs and budget.</p>
             </div>
         </div>
     </section>
 
-    <section id="faq" class="faq">
+
+
+    <section id="blog" class="blog">
         <div class="container">
-            <h2>Frequently Asked Questions</h2>
-            <div class="question">
-                <h3 onclick="toggleAnswer(this)">What is lead generation?</h3>
-                <p>Lead generation is the process of attracting and converting potential customers into someone who has indicated interest in your company's product or service.</p>
+            <h2 class="blog-title">Latest from Our Blog</h2>
+            <div class="blog-grid">
+                <div class="blog-post blog-post-1">
+                    <div class="blog-post-image-wrapper">
+                        <img src="blog-post-1.jpg" alt="Blog Post 1" class="blog-post-image">
+                     </div>
+                    <div class="blog-post-content">
+                        <h3 class="blog-post-title">The Future of Lead Generation</h3>
+                        <p class="blog-post-excerpt">Explore the latest trends and technologies that are shaping the future of lead generation.</p>
+                        <a href="#" class="blog-post-button">Read More</a>
+                    </div>
+                     <div class="blog-post-full-content">
+                        <p>The lead generation landscape is constantly evolving.  New technologies and strategies are emerging all the time, making it crucial for businesses to stay ahead of the curve.</p>
+                        <p>In this article, we'll explore some of the key trends that are shaping the future of lead generation, including:</p>
+                        <ul>
+                            <li>The rise of account-based marketing (ABM)</li>
+                            <li>The growing importance of video marketing</li>
+                            <li>The increasing use of artificial intelligence (AI)</li>
+                            <li>The shift towards personalized experiences</li>
+                        </ul>
+                         <p>We'll also discuss how businesses can adapt to these changes and leverage them to improve their lead generation results.</p>
+                     </div>
+                </div>
+                <div class="blog-post blog-post-2">
+                     <div class="blog-post-image-wrapper">
+                        <img src="blog-post-2.jpg" alt="Blog Post 2" class="blog-post-image">
+                     </div>
+                    <div class="blog-post-content">
+                        <h3 class="blog-post-title">5 Tips for Effective Lead Qualification</h3>
+                        <p class="blog-post-excerpt">Learn how to qualify leads effectively and improve your sales conversion rates.</p>
+                        <a href="#" class="blog-post-button">Read More</a>
+                    </div>
+                     <div class="blog-post-full-content">
+                        <p>Lead qualification is a critical step in the sales process.  It involves determining whether a lead is a good fit for your business and whether they are likely to become a customer.</p>
+                        <p>By qualifying leads effectively, you can:</p>
+                        <ul>
+                            <li>Save time and resources by focusing on the most promising leads</li>
+                            <li>Improve your sales conversion rates</li>
+                            <li>Increase customer satisfaction</li>
+                        </ul>
+                        <p>In this article, we'll share 5 tips for effective lead qualification, including:</p>
+                         <ul>
+                            <li>Defining your ideal customer profile</li>
+                            <li>Asking the right questions</li>
+                            <li>Using a lead scoring system</li>
+                            <li>Identifying buyer intent</li>
+                            <li>Following up consistently</li>
+                        </ul>
+                     </div>
+                </div>
+                 <div class="blog-post blog-post-3">
+                    <div class="blog-post-image-wrapper">
+                        <img src="blog-post-3.jpg" alt="Blog Post 3" class="blog-post-image">
+                     </div>
+                    <div class="blog-post-content">
+                        <h3 class="blog-post-title">The Power of Personalization in Lead Generation</h3>
+                        <p class="blog-post-excerpt">Discover how personalization can significantly improve your lead generation results.</p>
+                        <a href="#" class="blog-post-button">Read More</a>
+                    </div>
+                    <div class="blog-post-full-content">
+                         <p>Personalization is becoming increasingly important in lead generation.  Customers are tired of generic marketing messages and expect businesses to tailor their communications to their individual needs and interests.</p>
+                         <p>By personalizing your lead generation efforts, you can:</p>
+                         <ul>
+                            <li>Increase engagement and response rates</li>
+                            <li>Improve the quality of your leads</li>
+                            <li>Build stronger relationships with potential customers</li>
+                         </ul>
+                         <p>In this article, we'll explore the power of personalization in lead generation and discuss how you can use it to improve your results.</p>
+                    </div>
+                </div>
             </div>
-            <div class="question">
-                <h3 onclick="toggleAnswer(this)">How does Coldloom generate leads?</h3>
-                <p>We use a combination of online marketing, content creation, and targeted outreach to generate high-quality leads.</p>
-            </div>
-            <div class="question">
-                <h3 onclick="toggleAnswer(this)">How much does your service cost?</h3>
-                <p>Our pricing varies depending on your specific needs and the scope of the project. Please contact us for a customized quote.</p>
+             <div class="blog-overview">
+                    <p>Our blog provides valuable insights and resources on the latest trends and best practices in lead generation.  We cover a wide range of topics to help you stay ahead of the curve.</p>
+                    <p>Check back regularly for new articles and updates.</p>
             </div>
         </div>
     </section>
 
-    <footer>
+    <section id="contact" class="contact">
         <div class="container">
-            <p>&copy; 2025 Coldloom. All rights reserved.</p>
+            <h2 class="contact-title">Contact Us</h2>
+            <div class="contact-content">
+                <div class="contact-form-wrapper">
+                    <h3 class="contact-form-title">Get in touch with us</h3>
+                    <form action="your-form-processing-url" method="POST" class="contact-form" id="contact-form-2">
+                         <div class="form-group">
+                            <input type="text" name="name" placeholder="Name" required id="name-2">
+                            <div id="name-error-2" class="error-message"></div>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Email" required id="email-2">
+                             <div id="email-error-2" class="error-message"></div>
+                        </div>
+                        <div class="form-group">
+                             <input type="tel" name="phone" placeholder="Phone Number" id="phone-2">
+                            <div id="phone-error-2" class="error-message"></div>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" placeholder="Your Message" required id="message-2"></textarea>
+                            <div id="message-error-2" class="error-message"></div>
+                        </div>
+                        <button type="submit" class="contact-form-button">Send Message</button>
+                    </form>
+                    <div id="form-submission-message-2" class="form-submission-message"></div>
+                </div>
+                <div class="contact-info">
+                    <h3 class="contact-info-title">Our Information</h3>
+                    <p class="contact-info-address">
+                        <strong>Address:</strong> 123 Main Street, Anytown, USA
+                    </p>
+                    <p class="contact-info-phone">
+                        <strong>Phone:</strong> +1 555-123-4567
+                    </p>
+                    <p class="contact-info-email">
+                        <strong>Email:</strong> info@coldloom.com
+                    </p>
+                    <div class="contact-info-map">
+                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d317718.69103098597!2d-122.41949999999999!3d37.7749!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80859a6d00690021%3A0x4a501367e0f62402!2sSan%20Francisco%2C%20CA!5e0!3m3!0m2!1sde!2sus!4v1683159712381!5m2!0m1!10m2!1i20!1i37"  width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                     <div class="contact-info-additional">
+                        <p>We are available during the following hours:</p>
+                        <ul>
+                            <li>Monday - Friday: 9:00 AM to 5:00 PM</li>
+                            <li>Saturday: 10:00 AM to 2:00 PM</li>
+                            <li>Sunday: Closed</li>
+                        </ul>
+                        <p>You can also connect with us on social media:</p>
+                        <div class="contact-info-social">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-copyright">© 2025 Coldloom. All rights reserved.</p>
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+             <div class="footer-legal">
+                <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+            </div>
         </div>
     </footer>
-
-    <script>
-        function toggleAnswer(question) {
-            const answer = question.nextElementSibling;
-            if (answer.style.display === "none") {
-                answer.style.display = "block";
-            } else {
-                answer.style.display = "none";
-            }
+<script>
+    function toggleAnswer(question) {
+        const answer = question.nextElementSibling;
+        if (answer.style.display === "none") {
+            answer.style.display = "block";
+        } else {
+            answer.style.display = "none";
         }
-    </script>
+    }
+document.addEventListener('DOMContentLoaded', () => {
+    const navLinks = document.querySelector('.nav-links');
+    const hamburger = document.querySelector('.hamburger');
+
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('show');
+    });
+});
+
+
+    document.addEventListener('DOMContentLoaded', () => {
+    const contactForm = document.getElementById('contact-form');
+    const nameInput = document.getElementById('name');
+    const emailInput = document.getElementById('email');
+    const messageInput = document.getElementById('message');
+    const formSubmissionMessage = document.getElementById('form-submission-message');
+
+
+    function validateForm() {
+        let isValid = true;
+
+
+        if (!nameInput.value.trim()) {
+            document.getElementById('name-error').textContent="Name is required";
+            isValid = false;
+        }  else if (nameInput.value.trim().length < 3) {
+             document.getElementById('name-error').textContent="Name must be at least 3 characters long";
+             isValid = false;
+        } else{
+             document.getElementById('name-error').textContent="";
+        }
+
+        if (!emailInput.value.trim()) {
+             document.getElementById('email-error').textContent="Email is required";
+            isValid = false;
+        } else if (!isValidEmail(emailInput.value.trim())) {
+             document.getElementById('email-error').textContent="Invalid email format";
+            isValid = false;
+        }else{
+             document.getElementById('email-error').textContent="";
+        }
+
+         if (!messageInput.value.trim()) {
+             document.getElementById('message-error').textContent="Message is required";
+            isValid = false;
+        } else if (messageInput.value.trim().length < 10) {
+             document.getElementById('message-error').textContent="Message must be at least 10 characters long";
+            isValid = false;
+        }else{
+             document.getElementById('message-error').textContent="";
+        }
+
+        return isValid;
+    }
+    function isValidEmail(email) {
+        const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+        return emailRegex.test(email);
+    }
+
+
+    contactForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+
+        if (validateForm()) {
+            const formData = new FormData(contactForm);
+
+           fetch('your-form-processing-url', {  //  Replace with your server-side endpoint
+                method: 'POST',
+                body: formData,
+            })
+            .then(response => {
+                if (response.ok) {
+                    formSubmissionMessage.textContent = 'Thank you for your submission! We will get back to you shortly.';
+                    contactForm.reset();
+                } else {
+                    formSubmissionMessage.textContent = 'Sorry, there was an error submitting your form. Please try again.';
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                formSubmissionMessage.textContent = 'Sorry, there was an error submitting your form. Please try again.';
+            });
+        }
+    });
+});
+document.addEventListener('DOMContentLoaded', () => {
+    const contactForm2 = document.getElementById('contact-form-2');
+    const nameInput2 = document.getElementById('name-2');
+    const emailInput2 = document.getElementById('email-2');
+     const phoneInput2 = document.getElementById('phone-2');
+    const messageInput2 = document.getElementById('message-2');
+    const formSubmissionMessage2 = document.getElementById('form-submission-message-2');
+
+
+
+    function validateForm2() {
+        let isValid = true;
+
+
+         if (!nameInput2.value.trim()) {
+            document.getElementById('name-error-2').textContent="Name is required";
+            isValid = false;
+        }  else if (nameInput2.value.trim().length < 3) {
+             document.getElementById('name-error-2').textContent="Name must be at least 3 characters long";
+             isValid = false;
+        }else{
+             document.getElementById('name-error-2').textContent="";
+        }
+
+        if (!emailInput2.value.trim()) {
+             document.getElementById('email-error-2').textContent="Email is required";
+            isValid = false;
+        } else if (!isValidEmail(emailInput2.value.trim())) {
+             document.getElementById('email-error-2').textContent="Invalid email format";
+            isValid = false;
+        }else{
+             document.getElementById('email-error-2').textContent="";
+        }
+        
+          if (!phoneInput2.value.trim()) {
+            document.getElementById('phone-error-2').textContent="Phone is required";
+            isValid = false;
+        } else if (!isValidPhone(phoneInput2.value.trim())) {
+             document.getElementById('phone-error-2').textContent="Invalid phone format";
+            isValid = false;
+        }else{
+             document.getElementById('phone-error-2').textContent="";
+        }
+
+         if (!messageInput2.value.trim()) {
+             document.getElementById('message-error-2').textContent="Message is required";
+            isValid = false;
+        } else if (messageInput2.value.trim().length < 10) {
+             document.getElementById('message-error-2').textContent="Message must be at least 10 characters long";
+            isValid = false;
+        }else{
+             document.getElementById('message-error-2').textContent="";
+        }
+
+        return isValid;
+    }
+    function isValidEmail(email) {
+        const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+        return emailRegex.test(email);
+    }
+    function isValidPhone(phone) {
+        const phoneRegex = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+        return phoneRegex.test(phone);
+    }
+
+
+    contactForm2.addEventListener('submit', (event) => {
+        event.preventDefault();
+
+        if (validateForm2()) {
+            const formData = new FormData(contactForm2);
+
+           fetch('your-form-processing-url', {  //  Replace with your server-side endpoint
+                method: 'POST',
+                body: formData,
+            })
+            .then(response => {
+                if (response.ok) {
+                    formSubmissionMessage2.textContent = 'Thank you for your submission! We will get back to you shortly.';
+                    contactForm2.reset();
+                } else {
+                    formSubmissionMessage2.textContent = 'Sorry, there was an error submitting your form. Please try again.';
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                formSubmissionMessage2.textContent = 'Sorry, there was an error submitting your form. Please try again.';
+            });
+        }
+    });
+});
+</script>
 </body>
 </html>
