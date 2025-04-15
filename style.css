@@ -1,4 +1,4 @@
-/* File: coldloom.css */
+* File: coldloom.css - BADASS DARK MODE UPGRADE */
 
 /* RESET & BASE */
 * {
@@ -10,8 +10,8 @@
 body {
   font-family: 'Montserrat', Arial, sans-serif;
   line-height: 1.6;
-  color: #333;
-  background-color: #f9f9f9;
+  color: #e4e4e4;
+  background-color: #0d1117;
   scroll-behavior: smooth;
 }
 
@@ -54,7 +54,7 @@ body {
     top: 80px;
     left: 0;
     width: 100%;
-    background-color: #fff;
+    background-color: #111927;
     padding: 20px;
   }
 
@@ -70,8 +70,8 @@ body {
 
 /* HEADER */
 header {
-  background-color: #fff;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: #111927;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
   position: sticky;
   top: 0;
   z-index: 100;
@@ -79,7 +79,7 @@ header {
 }
 
 header.scrolled {
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
 }
 
 /* HAMBURGER MENU */
@@ -95,56 +95,62 @@ header.scrolled {
 .bar {
   width: 25px;
   height: 3px;
-  background-color: #333;
+  background-color: #00e0ff;
   margin: 4px 0;
 }
 
 /* HERO SECTION */
 .hero {
-  background-color: #f0f8ff;
+  background: linear-gradient(145deg, #0d1117 0%, #111927 100%);
   padding: 120px 0;
   text-align: center;
 }
 
 .hero-title {
-  font-size: 48px;
-  font-weight: 800;
-  color: #2c3e50;
+  font-size: 54px;
+  font-weight: 900;
+  color: #00e0ff;
   margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 .hero-tagline {
-  font-size: 20px;
-  color: #555;
-  margin-bottom: 30px;
+  font-size: 22px;
+  color: #ccc;
+  margin-bottom: 40px;
 }
 
 /* LEAD FORM */
 .lead-form {
-  background-color: #fff;
+  background-color: #1a1f2a;
   padding: 60px 0;
   text-align: center;
+  border-top: 1px solid #222;
+  border-bottom: 1px solid #222;
 }
 
 .lead-form-title {
-  font-size: 32px;
+  font-size: 36px;
   font-weight: 700;
-  color: #2c3e50;
+  color: #00e0ff;
   margin-bottom: 30px;
 }
 
 .lead-form-button {
-  padding: 12px 30px;
-  background-color: #28a745;
-  color: white;
+  padding: 14px 36px;
+  background-color: #00e0ff;
+  color: #0d1117;
   border: none;
   font-size: 18px;
-  font-weight: 600;
-  border-radius: 5px;
+  font-weight: 700;
+  border-radius: 8px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
 .lead-form-button:hover {
-  background-color: #218838;
+  background-color: #00b4cc;
 }
