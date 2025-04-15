@@ -1,7 +1,4 @@
-/* File: coldloom.css */
-
-/* RESET & BASE */
-* {
+{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -10,24 +7,24 @@
 body {
     font-family: 'Montserrat', sans-serif;
     line-height: 1.6;
-    background-color: #f2f6fa;
-    color: #1f1f1f;
+    color: #333;
+    background-color: #f9f9f9;
     scroll-behavior: smooth;
 }
 
 .container {
     max-width: 1200px;
-    margin: auto;
+    margin: 0 auto;
     padding: 0 20px;
 }
 
-/* HEADER */
+/* Header and Navigation */
 header {
-    background: #ffffff;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     position: sticky;
     top: 0;
     z-index: 100;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 nav {
@@ -35,32 +32,33 @@ nav {
     justify-content: space-between;
     align-items: center;
     height: 80px;
-    padding: 0 20px;
 }
 
 .logo {
-    font-size: 28px;
-    font-weight: bold;
+    font-size: 24px;
+    font-weight: 700;
     color: #007bff;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 25px;
+    margin-left: auto; /* Push nav links to the right */
+}
+
+.nav-links li {
+    margin-left: 30px;
 }
 
 .nav-links li a {
     text-decoration: none;
-    font-weight: 600;
     color: #333;
-    transition: 0.3s;
-    padding: 8px 14px;
-    border-radius: 5px;
+    font-weight: 600;
+    font-size: 16px;
+    transition: color 0.3s ease;
 }
 
 .nav-links li a:hover {
-    background: #e3f0ff;
     color: #007bff;
 }
 
@@ -68,167 +66,125 @@ nav {
     display: none;
     flex-direction: column;
     cursor: pointer;
+    padding: 10px;
+    border: none;
+    background: none;
 }
 
 .bar {
     width: 25px;
     height: 3px;
     background-color: #333;
-    margin: 4px 0;
+    margin: 5px 0;
+    transition: transform 0.3s ease-in-out;
 }
 
-/* HERO */
+/* Hero Section */
 .hero {
-    background: linear-gradient(135deg, #007bff, #00c6ff);
-    color: white;
-    padding: 120px 20px;
+    background-color: #f0f8ff;
+    padding: 120px 0;
     text-align: center;
 }
 
 .hero-title {
-    font-size: 52px;
+    font-size: 48px;
     font-weight: 800;
-    margin-bottom: 15px;
+    color: #2c3e50;
+    margin-bottom: 20px;
 }
 
 .hero-tagline {
-    font-size: 22px;
-    margin-bottom: 25px;
-    opacity: 0.9;
+    font-size: 20px;
+    color: #555;
+    margin-bottom: 30px;
 }
 
 .hero-btn {
-    background: white;
-    color: #007bff;
-    padding: 14px 32px;
-    font-weight: 700;
-    border: none;
-    border-radius: 6px;
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #007bff;
+    color: white;
     text-decoration: none;
     font-size: 18px;
-    transition: background 0.3s;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
 }
 
 .hero-btn:hover {
-    background: #f0f0f0;
+    background-color: #0056b3;
 }
 
-/* FORM STYLES */
-input, textarea {
-    font-family: inherit;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    padding: 12px 15px;
-    width: 100%;
-    font-size: 16px;
-    transition: 0.3s;
+.hero-image-wrapper {
+    margin-top: 50px;
 }
 
-input:focus, textarea:focus {
-    border-color: #007bff;
-    outline: none;
+.hero-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-button, .lead-form-button {
-    background-color: #28a745;
-    color: white;
-    font-size: 18px;
-    padding: 12px 30px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-button:hover, .lead-form-button:hover {
-    background-color: #218838;
-}
-
-/* SERVICES */
-.services {
-    background: #f0f8ff;
-    padding: 80px 20px;
-}
-
-.services-title {
+/* Lead Form Section */
+.lead-form {
+    background-color: #fff;
+    padding: 60px 0;
     text-align: center;
-    font-size: 38px;
-    margin-bottom: 50px;
+}
+
+.lead-form-title {
+    font-size: 32px;
     font-weight: 700;
     color: #2c3e50;
+    margin-bottom: 30px;
 }
 
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-}
-
-.service-card {
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-    padding: 25px;
-    text-align: left;
-    transition: transform 0.3s;
+.lead-form-form {
+    max-width: 600px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
-    height: 100%;
+    align-items: center;
 }
 
-.service-card:hover {
-    transform: translateY(-8px);
+.form-group {
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: left;
 }
 
-.service-card-title {
-    font-size: 22px;
-    font-weight: 600;
-    margin-bottom: 12px;
-    color: #007bff;
-}
-
-.service-card-description {
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
     font-size: 16px;
-    color: #555;
-    flex-grow: 1;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
 }
 
-/* FOOTER */
-.footer {
-    background-color: #343a40;
-    color: #fff;
-    text-align: center;
-    padding: 40px 20px;
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #007bff;
 }
 
-.footer a {
-    color: #fff;
-    margin: 0 10px;
-    transition: 0.3s;
+.form-group textarea {
+    resize: none;
+    height: 120px;
 }
 
-.footer a:hover {
-    color: #007bff;
-}
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        background: #fff;
-        position: absolute;
-        width: 100%;
-        top: 80px;
-        left: 0;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-
-    .nav-links.show {
-        display: flex;
-    }
-
-    .hamburger {
-        display: flex;
-    }
-}
+.lead-form-button {
+    padding: 12px 30px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    max-width:
