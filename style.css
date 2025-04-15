@@ -17,8 +17,6 @@ body {
     margin: 0 auto;
     padding: 0 20px;
 }
-
-/* Header and Navigation */
 header {
     background-color: #fff;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -78,9 +76,7 @@ nav {
     margin: 5px 0;
     transition: transform 0.3s ease-in-out;
 }
-
-/* Hero Section */
-.hero {
+hero {
     background-color: #f0f8ff;
     padding: 120px 0;
     text-align: center;
@@ -126,8 +122,8 @@ nav {
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
-
-/* Lead Form Section */
+Lead Form Section
+CSS
 .lead-form {
     background-color: #fff;
     padding: 60px 0;
@@ -186,10 +182,3 @@ nav {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    width: 100%;
-    max-width: 250px;
-}
-
-.lead-form-button:hover {
-    background-color: #218838;
-}
