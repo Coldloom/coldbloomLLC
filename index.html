@@ -1,22 +1,116 @@
-<section class="hero">
-    <div class="container">
-        <h1>Connect with Qualified Leads, Faster, with Coldloom.</h1>
-        <p class="tagline">We streamline the process, so you connect with the right people, every time.</p>
-        <a href="#lead-form" class="btn">Generate My Leads</a>
-        <img src="lead-generation-graphic.jpg" alt="Lead Generation Graphic">
-    </div>
-</section>
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coldloom - Lead Generation Service</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <a href="#" class="logo">Coldloom</a>
+                <ul class="nav-links">
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#lead-form">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
 
-<section id="lead-form" class="lead-form">
-    <div class="container">
-        <h2>Provide your information to get started.</h2>
-        <form action="your-form-processing-url" method="POST">
-            <input type="text" name="name" placeholder="Name" required>
-            <input type="email" name="email" placeholder="Email" required>
-            <input type="tel" name="phone" placeholder="Phone Number">
-            <input type="text" name="company" placeholder="Company Name">
-            <textarea name="message" placeholder="Your Message"></textarea>
-            <button type="submit">Submit Information</button>
-        </form>
-    </div>
-</section>
+    <section id="hero" class="hero">
+        <div class="container">
+            <h1>Connect with Qualified Leads, Faster, with Coldloom.</h1>
+            <p class="tagline">We streamline the process, so you connect with the right people, every time.</p>
+            <a href="#lead-form" class="btn">Generate My Leads</a>
+            <img src="lead-generation-graphic.jpg" alt="Lead Generation Graphic">
+        </div>
+    </section>
+
+    <section id="lead-form" class="lead-form">
+        <div class="container">
+            <h2>Provide your information to get started.</h2>
+            <form action="your-form-processing-url" method="POST">
+                <input type="text" name="name" placeholder="Name" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="tel" name="phone" placeholder="Phone Number">
+                <input type="text" name="company" placeholder="Company Name">
+                <textarea name="message" placeholder="Your Message"></textarea>
+                <button type="submit">Submit Information</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="service-item">
+                <h3>Targeted Lead Generation</h3>
+                <p>We use advanced strategies to identify and target your ideal customers.</p>
+            </div>
+            <div class="service-item">
+                <h3>Lead Qualification</h3>
+                <p>Our team qualifies leads to ensure you're only connecting with those who are ready to buy.</p>
+            </div>
+            <div class="service-item">
+                <h3>Sales Enablement</h3>
+                <p>We provide your sales team with the tools and information they need to close more deals.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2>What Our Clients Say</h2>
+            <div class="testimonial-item">
+                <p>"Coldloom has transformed our sales process. We're now closing deals faster than ever before."</p>
+                <p class="author">- John Smith, CEO of ABC Corp</p>
+            </div>
+            <div class="testimonial-item">
+                <p>"The quality of leads we receive from Coldloom is exceptional. Highly recommended!"</p>
+                <p class="author">- Jane Doe, Sales Director at XYZ Inc</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="faq">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="question">
+                <h3 onclick="toggleAnswer(this)">What is lead generation?</h3>
+                <p>Lead generation is the process of attracting and converting potential customers into someone who has indicated interest in your company's product or service.</p>
+            </div>
+            <div class="question">
+                <h3 onclick="toggleAnswer(this)">How does Coldloom generate leads?</h3>
+                <p>We use a combination of online marketing, content creation, and targeted outreach to generate high-quality leads.</p>
+            </div>
+            <div class="question">
+                <h3 onclick="toggleAnswer(this)">How much does your service cost?</h3>
+                <p>Our pricing varies depending on your specific needs and the scope of the project. Please contact us for a customized quote.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Coldloom. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleAnswer(question) {
+            const answer = question.nextElementSibling;
+            if (answer.style.display === "none") {
+                answer.style.display = "block";
+            } else {
+                answer.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
