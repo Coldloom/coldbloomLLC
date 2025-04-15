@@ -1,66 +1,96 @@
-<!-- Header Section -->
-<header>
-  <nav>
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Services</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
-  </nav>
+<!-- Hero Section -->
+<header class="hero">
+  <div class="container hero-content">
+    <div class="hero-text">
+      <h1>Coldloom</h1>
+      <p class="tagline">Building pipelines and driving sales</p>
+      <div class="hero-buttons">
+        <a href="#services" class="btn">Learn More</a>
+        <a href="#contact" class="btn">Get in Touch</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="hero-image.jpg" alt="Coldloom" />
+    </div>
+  </div>
 </header>
 
-<!-- Hero Section -->
-<section class="hero">
-  <div class="hero-background" style="background-image: url('image-url');"></div>
-  <div class="hero-content">
-    <h1>We don’t sell leads. We build pipelines.</h1>
-    <p>Get exclusive, ready-to-convert leads through powerful cold outreach systems</p>
-    <button>Get Started</button>
+<!-- Navigation Bar -->
+<nav class="navbar">
+  <div class="container">
+    <a href="#services">Services</a>
+    <a href="#about">About Us</a>
+    <a href="#testimonials">Testimonials</a>
+    <a href="#contact">Contact</a>
+    <a href="#quote">Get a Quote</a>
   </div>
-</section>
+</nav>
 
 <!-- Services Section -->
-<section class="services">
-  <h2>Our Services</h2>
-  <div class="service-card">
-    <h3>Lead Generation</h3>
-    <p>Get exclusive, ready-to-convert leads through powerful cold outreach systems</p>
-  </div>
-  <div class="service-card">
-    <h3>Cold Outreach</h3>
-    <p>Reach out to potential customers and build relationships</p>
-  </div>
-  <div class="service-card">
-    <h3>Pipeline Building</h3>
-    <p>Build pipelines and drive sales with our expert guidance</p>
+<section id="services" class="section">
+  <div class="container">
+    <h2>Our Services</h2>
+    <div class="service-grid">
+      <div class="card">
+        <i class="fas fa-chart-line"></i>
+        <h3>Lead Generation</h3>
+        <p>Get exclusive, ready-to-convert leads through powerful cold outreach systems</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-handshake"></i>
+        <h3>Cold Outreach</h3>
+        <p>Reach out to potential customers and build relationships</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-pipeline"></i>
+        <h3>Pipeline Building</h3>
+        <p>Build pipelines and drive sales with our expert guidance</p>
+      </div>
+    </div>
   </div>
 </section>
 
 <!-- About Section -->
-<section class="about">
-  <h2>About Us</h2>
-  <p>We're a team of experts dedicated to helping businesses succeed</p>
-  <div class="team-member">
-    <img src="image-url" alt="Team Member">
-    <h3>John Doe</h3>
-    <p>CEO & Founder</p>
+<section id="about" class="section light">
+  <div class="container">
+    <h2>About Us</h2>
+    <p>At Coldloom, we help businesses succeed with our expert lead generation and cold outreach services.</p>
   </div>
 </section>
 
-<!-- Contact Section -->
-<section class="contact">
-  <h2>Get in Touch</h2>
-  <p>Contact us to learn more about our services</p>
-  <form>
-    <input type="text" placeholder="Name">
-    <input type="email" placeholder="Email">
-    <textarea placeholder="Message"></textarea>
-    <button>Send Message</button>
-  </form>
+<!-- Testimonials Section -->
+<section id="testimonials" class="section">
+  <div class="container">
+    <h2>What Our Customers Say</h2>
+    <div class="testimonial">
+      <p>"Coldloom has been a game-changer for our business. We've seen a significant increase in leads and conversions."</p>
+      <span>- John Doe</span>
+    </div>
+    <div class="testimonial">
+      <p>"The team at Coldloom is professional and responsive. They've helped us build a robust pipeline and drive sales."</p>
+      <span>- Jane Smith</span>
+    </div>
+  </div>
 </section>
 
-<!-- Footer Section -->
-<footer>
-  <p>&copy; 2023 Coldloom</p>
-</footer>
+<!-- Contact and Quote Forms -->
+<section id="contact" class="section form-section">
+  <div class="container">
+    <h2>Get in Touch</h2>
+    <p>Ready to learn more about our services? Contact us today!</p>
+    <form id="contactForm">
+      <input type="text" id="name" name="name" placeholder="Your Name" required>
+      <input type="email" id="email" name="email" placeholder="Your Email" required>
+      <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+</section>
+
+<section id="quote" class="section form-section">
+  <div class="container">
+    <h2>Get a Free Quote</h2>
+    <p>Fill out the form below for a personalized quote.</p>
+    <form id="quoteForm">
+      <input type="text" id="company" name="company" placeholder="Your Company" required>
+      <input type="text" id="services" name="services
