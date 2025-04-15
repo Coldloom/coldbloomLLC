@@ -1,184 +1,124 @@
 {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Montserrat', Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f9f9;
+  scroll-behavior: smooth;
+}
+container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Example media query */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 10px;
+  }
+}
+header {
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  transition: box-shadow 0.3s ease;
+}
+
+/* Add this to enhance the sticky effect */
+header.scrolled {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+For the hamburger menu, you'll want to add media queries to display it on smaller screens and hide the nav links.
+CSS
+.hamburger {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    padding: 20px;
+  }
+  
+  .nav-links li {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+  
+  .hamburger {
+    display: flex;
+  }
+}
+.hero {
+  background-color: #f0f8ff;
+  padding: 120px 0;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 60px 0;
+  }
+  
+  .hero-title {
+    font-size: 36px;
+  }
+  
+  .hero-tagline {
+    font-size: 18px;
+  }
+}
+.lead-form {
+  background-color: #fff;
+  padding: 60px 0;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .lead-form {
+    padding: 30px 0;
+  }
+  
+  .lead-form-title {
+    font-size: 24px;
+  }
+}
+lead-form-button {
+  padding: 12px 30px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.lead-form-button:hover {
+  background-color: #218838;
+}
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f9f9f9;
-    scroll-behavior: smooth;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-header {
-    background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 80px;
-}
-
-.logo {
-    font-size: 24px;
-    font-weight: 700;
-    color: #007bff;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    margin-left: auto; /* Push nav links to the right */
-}
-
-.nav-links li {
-    margin-left: 30px;
-}
-
-.nav-links li a {
-    text-decoration: none;
-    color: #333;
-    font-weight: 600;
-    font-size: 16px;
-    transition: color 0.3s ease;
-}
-
-.nav-links li a:hover {
-    color: #007bff;
-}
-
-.hamburger {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    padding: 10px;
-    border: none;
-    background: none;
-}
-
-.bar {
-    width: 25px;
-    height: 3px;
-    background-color: #333;
-    margin: 5px 0;
-    transition: transform 0.3s ease-in-out;
-}
-hero {
-    background-color: #f0f8ff;
-    padding: 120px 0;
-    text-align: center;
-}
-
-.hero-title {
-    font-size: 48px;
-    font-weight: 800;
-    color: #2c3e50;
-    margin-bottom: 20px;
-}
-
-.hero-tagline {
-    font-size: 20px;
-    color: #555;
-    margin-bottom: 30px;
-}
-
-.hero-btn {
-    display: inline-block;
-    padding: 12px 30px;
-    background-color: #007bff;
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: 600;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-    margin-top: 20px;
-}
-
-.hero-btn:hover {
-    background-color: #0056b3;
-}
-
-.hero-image-wrapper {
-    margin-top: 50px;
-}
-
-.hero-image {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-Lead Form Section
-CSS
-.lead-form {
-    background-color: #fff;
-    padding: 60px 0;
-    text-align: center;
-}
-
-.lead-form-title {
-    font-size: 32px;
-    font-weight: 700;
-    color: #2c3e50;
-    margin-bottom: 30px;
-}
-
-.lead-form-form {
-    max-width: 600px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.form-group {
-    width: 100%;
-    margin-bottom: 20px;
-    text-align: left;
-}
-
-.form-group input,
-.form-group textarea {
-    width: 100%;
-    padding: 12px 15px;
-    font-size: 16px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    outline: none;
-    transition: border-color 0.3s ease;
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-    border-color: #007bff;
-}
-
-.form-group textarea {
-    resize: none;
-    height: 120px;
-}
-
-.lead-form-button {
-    padding: 12px 30px;
-    background-color: #28a745;
-    color: white;
-    border: none;
-    font-size: 18px;
-    font-weight: 600;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+  font-family: 'Montserrat', Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f9f9;
