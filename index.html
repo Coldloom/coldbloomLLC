@@ -1,63 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cold Loom</title>
-    <link rel="stylesheet" href="coldloom.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coldloom | Elite Lead Gen Agency</title>
+  <link rel="stylesheet" href="coldloom.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-                <button class="hamburger">
-                    <div class="bar"></div>
-                    <div class="bar"></div>
-                    <div class="bar"></div>
-                </button>
-            </nav>
-        </div>
-    </header>
-    <section class="hero">
-        <div class="container">
-            <h1 class="hero-title">Welcome to Cold Loom</h1>
-            <p class="hero-tagline">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
-    </section>
-    <section class="lead-form">
-        <div class="container">
-            <h2 class="lead-form-title">Get in Touch</h2>
-            <form>
-                <input type="email" placeholder="Email Address">
-                <button class="lead-form-button">Submit</button>
-            </form>
-        </div>
-    </section>
 
-    <script>
-        // Add event listener to header for scroll effect
-        window.addEventListener('scroll', function() {
-            const header = document.querySelector('header');
-            if (window.scrollY > 0) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        });
+  <!-- HEADER -->
+  <header>
+    <div class="container flex-between">
+      <h1 class="logo">Coldloom</h1>
+      <nav>
+        <ul class="nav-links flex">
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#process">How It Works</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Get Started</a></li>
+        </ul>
+        <button class="hamburger">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </button>
+      </nav>
+    </div>
+  </header>
 
-        // Add event listener to hamburger menu
-        const hamburger = document.querySelector('.hamburger');
-        const navLinks = document.querySelector('.nav-links');
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <h2 class="hero-title">Coldloom</h2>
+      <p class="hero-tagline">Cold outreach that actually converts.</p>
+      <a href="#contact" class="btn btn-accent">Book a Call</a>
+    </div>
+  </section>
 
-        hamburger.addEventListener('click', function() {
-            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
-        });
-    </script>
-</body>
-</html>
+  <!-- ABOUT -->
+  <section id="about" class="about-section">
+    <div class="container">
+      <h2 class="section-title">Who We Are</h2>
+      <p class="section-description">
+        Coldloom is a high-performance lead generation agency focused on getting you results fast. We specialize in outbound strategy, copywriting, and appointment setting that cuts through the noise.
+      </p>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="services-section">
+    <div class="container">
+      <h2 class="section-title">What We Do</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <h3 class="service-title">Cold Email Campaigns</h3>
+          <p>We craft and send high-converting cold emails tailored to your ideal client profile.</p>
+        </div>
+        <div class="service-card">
+          <h3 class="service-title">Lead List Building</h3>
+          <p>Hand-curated lead lists with verified data to maximize outreach success.</p>
+        </div>
+        <div class="service-card">
+          <h3 class="service-title">Sales Funnels</h3>
+          <p>From cold message to booked call — we build funnels that bring you leads, not spam.</p>
+        </div>
+      </div>
+    </div>
+  </section>
