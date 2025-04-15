@@ -1,70 +1,98 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Coldloom | Elite Lead Gen Agency</title>
-  <link rel="stylesheet" href="coldloom.css">
-</head>
-<body>
-
-  <!-- HEADER -->
-  <header>
-    <div class="container flex-between">
-      <h1 class="logo">Coldloom</h1>
-      <nav>
-        <ul class="nav-links flex">
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#process">How It Works</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Get Started</a></li>
-        </ul>
-        <button class="hamburger">
-          <div class="bar"></div>
-          <div class="bar"></div>
-          <div class="bar"></div>
-        </button>
-      </nav>
-    </div>
-  </header>
-
-  <!-- HERO -->
-  <section class="hero">
-    <div class="container">
-      <h2 class="hero-title">Coldloom</h2>
-      <p class="hero-tagline">Cold outreach that actually converts.</p>
-      <a href="#contact" class="btn btn-accent">Book a Call</a>
-    </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section id="about" class="about-section">
-    <div class="container">
-      <h2 class="section-title">Who We Are</h2>
-      <p class="section-description">
-        Coldloom is a high-performance lead generation agency focused on getting you results fast. We specialize in outbound strategy, copywriting, and appointment setting that cuts through the noise.
-      </p>
-    </div>
-  </section>
-
-  <!-- SERVICES -->
-  <section id="services" class="services-section">
-    <div class="container">
-      <h2 class="section-title">What We Do</h2>
-      <div class="services-grid">
-        <div class="service-card">
-          <h3 class="service-title">Cold Email Campaigns</h3>
-          <p>We craft and send high-converting cold emails tailored to your ideal client profile.</p>
-        </div>
-        <div class="service-card">
-          <h3 class="service-title">Lead List Building</h3>
-          <p>Hand-curated lead lists with verified data to maximize outreach success.</p>
-        </div>
-        <div class="service-card">
-          <h3 class="service-title">Sales Funnels</h3>
-          <p>From cold message to booked call — we build funnels that bring you leads, not spam.</p>
-        </div>
+<!-- HOW IT WORKS -->
+<section id="process" class="process-section">
+  <div class="container">
+    <h2 class="section-title">How It Works</h2>
+    <div class="process-steps">
+      <div class="step">
+        <h3>1. Strategy Call</h3>
+        <p>We learn about your goals and create a roadmap for lead generation.</p>
+      </div>
+      <div class="step">
+        <h3>2. Campaign Launch</h3>
+        <p>We craft emails, scrape leads, and start hitting inboxes with style.</p>
+      </div>
+      <div class="step">
+        <h3>3. You Close</h3>
+        <p>We book the calls. You close the deals. Simple as that.</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
+<!-- PROJECTS SECTION -->
+<section id="projects" class="projects-section">
+  <div class="container">
+    <h2 class="section-title">Past Results</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <h3>LuxeGoods</h3>
+        <p>43% increase in replies after 2-week cold email test run.</p>
+      </div>
+      <div class="project-card">
+        <h3>GreenPulse</h3>
+        <p>Tripled booked calls for this clean energy SaaS startup.</p>
+      </div>
+      <div class="project-card">
+        <h3>ApexTech</h3>
+        <p>Generated 110 qualified leads in 30 days. No ads. Just emails.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials" class="testimonials-section">
+  <div class="container">
+    <h2 class="section-title">What Our Clients Say</h2>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <p>“Coldloom is the real deal. We saw ROI within weeks.”</p>
+        <span>– Jenna, CEO of GreenPulse</span>
+      </div>
+      <div class="testimonial-card">
+        <p>“We’ve worked with agencies before — none delivered like this.”</p>
+        <span>– Marcus, Founder of ApexTech</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CALL TO ACTION -->
+<section class="cta-section">
+  <div class="container text-center">
+    <h2>Ready to Get More Leads?</h2>
+    <p>Book a free call and see how Coldloom can scale your outreach.</p>
+    <a href="#contact" class="btn btn-accent">Talk to Us</a>
+  </div>
+</section>
+
+<!-- LEAD FORM -->
+<section id="contact" class="lead-form">
+  <div class="container">
+    <h2 class="lead-form-title">Work With Coldloom</h2>
+    <p class="lead-form-subtitle">Drop us a line and let’s get started on your project.</p>
+    
+    <form class="lead-form-fields" action="https://formspree.io/f/your-form-id" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <input type="text" name="company" placeholder="Company Name">
+      <textarea name="message" placeholder="Tell us about your project..." rows="5" required></textarea>
+      <button type="submit" class="lead-form-button">Send Message</button>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container flex-between">
+    <p>&copy; 2025 Coldloom LLC. All rights reserved.</p>
+    <ul class="footer-nav flex">
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</footer>
+
+</body>
+</html>
