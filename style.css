@@ -3,7 +3,64 @@ body {
     margin: 0;
     padding: 0;
 }
+
 .container {
     width: 80%;
     margin: 0 auto;
+}
+
+.hero {
+    background-color: #f0f0f0;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.hero .tagline {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.hero .btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.hero img {
+    max-width: 100%;
+    margin-top: 30px;
+}
+
+.lead-form {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.lead-form h2 {
+    margin-bottom: 20px;
+}
+
+.lead-form input,
+.lead-form textarea {
+    width: 300px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.lead-form button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
