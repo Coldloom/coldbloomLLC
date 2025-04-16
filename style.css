@@ -232,3 +232,68 @@ section {
 .btn-outline {
   transition: background 0.3s ease, color 0.3s ease;
 }
+/* Section: Final CTA / Footer */
+.final-cta {
+  padding: 4rem 2rem 2rem;
+  background: #002d3d;
+  color: #ffffff;
+  text-align: center;
+}
+
+.cta-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.final-cta h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.final-cta p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: #e0f7f4;
+}
+
+.final-cta .cta-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* Footer */
+.site-footer {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.footer-logo {
+  width: 140px;
+  height: auto;
+  filter: brightness(0) invert(1); /* makes it white on dark bg */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .final-cta h2 {
+    font-size: 2rem;
+  }
+
+  .final-cta p {
+    font-size: 1rem;
+  }
+
+  .footer-logo {
+    width: 120px;
+  }
+}
