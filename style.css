@@ -211,3 +211,24 @@ body {
     padding-left: 0;
   }
 }
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Prevent anchor jumps behind sticky navbar */
+section {
+  scroll-margin-top: 80px;
+}
+
+/* Hover effect for filled button */
+.btn-fill:hover {
+  background-color: #009e8b;
+}
+
+/* Smooth transition for button interactions */
+.cta-buttons a,
+.btn-fill,
+.btn-outline {
+  transition: background 0.3s ease, color 0.3s ease;
+}
