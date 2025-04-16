@@ -87,14 +87,15 @@ body {
 .hero-content h1 {
   font-size: 3rem;
   color: #002d3d;
-  margin-bottom: 1rem;
 }
 
-.hero-content p {
-  font-size: 1.2rem;
-  color: #444;
-  margin-bottom: 2rem;
-  line-height: 1.6;
+.hero-image img {
+  margin-top: 1rem;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
 }
 
 .hero-buttons {
@@ -103,15 +104,10 @@ body {
 }
 
 .hero-image {
-  flex: 1 1 400px;
-  text-align: center;
-}
-.hero-image img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
-  object-fit: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
 }/* Responsive */
 @media (max-width: 768px) {
   .navbar {
